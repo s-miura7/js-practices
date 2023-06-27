@@ -4,9 +4,8 @@ const month = argv.m ? argv.m : date.getMonth() + 1;
 const year = argv.y ? argv.y : date.getFullYear();
 const lastDate = new Date(year, month, 0).getDate();
 const wday = new Date(year, month - 1, 1).getDay();
-const wdays = ["日", "月", "火", "水", "木", "金", "土", "\n"];
 
-wdays.forEach((wday) => process.stdout.write(wday.padStart(2, " ")));
+console.log("日 月 火 水 木 金 土");
 console.log(`${month}月 ${year}`.padStart(13, " "));
 process.stdout.write(" ".repeat(3 * wday));
 for (let date = 1; date <= lastDate; date++) {
