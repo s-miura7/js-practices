@@ -10,10 +10,11 @@ const wday = new Date(year, month - 1, 1).getDay();
 console.log(`${month}月 ${year}`.padStart(13, " "));
 console.log("日 月 火 水 木 金 土");
 process.stdout.write(" ".repeat(3 * wday));
+let outputData = "";
 for (let date = 1; date <= lastDate; date++) {
-  process.stdout.write(String(date).padStart(2, " ") + " ");
+  outputData += String(date).padStart(2, " ") + " ";
   if ((date + wday) % 7 === 0) {
-    console.log("\n");
+    outputData += "\n";
   }
 }
-console.log("\n");
+console.log(outputData);
