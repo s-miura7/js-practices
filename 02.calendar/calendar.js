@@ -10,7 +10,7 @@ console.log(`${month}月 ${year}`.padStart(13, " "));
 process.stdout.write(" ".repeat(3 * wday));
 for (let date = 1; date <= lastDate; date++) {
   process.stdout.write(String(date).padStart(2, " ") + " ");
-  if ((date + wday) % 7 == 0) {
+  if ((date + wday) % 7 === 0) {
     console.log("\n");
   }
 }
