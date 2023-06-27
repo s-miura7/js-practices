@@ -1,4 +1,6 @@
-var argv = require("minimist")(process.argv.slice(2));
+import minimist from "minimist";
+
+const argv = minimist(process.argv.slice(2));
 const date = new Date();
 const month = argv.m ? argv.m : date.getMonth() + 1;
 const year = argv.y ? argv.y : date.getFullYear();
